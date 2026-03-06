@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Davi Nascimento | Software Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #6366f1;
+      --secondary: #a5b4fc;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --light-text: #94a3b8;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+    a { color: var(--primary); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--secondary); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+    header {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      padding: 3rem 0;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--light-text); }
+    .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .hero .contact-icons { margin: 1.5rem 0; font-size: 2rem; }
+    .hero .contact-icons a { margin: 0 1.2rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: var(--primary);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      margin: 0.6rem;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(99,102,241,0.25);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    section { padding: 6rem 0; }
+    h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      color: var(--primary);
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 90px;
+      height: 4px;
+      background: var(--primary);
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .about p { max-width: 900px; margin: 0 auto 1.8rem; font-size: 1.2rem; text-align: center; color: var(--light-text); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    .skill-item {
+      background: var(--card);
+      padding: 2rem 1.2rem;
+      border-radius: 14px;
+      transition: all 0.35s;
+    }
+    .skill-item:hover {
+      transform: translateY(-8px);
+      background: #334155;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+    .skill-item i { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2.5rem;
+    }
+    .project-card {
+      background: var(--card);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .project-img-placeholder {
+      height: 220px;
+      background: linear-gradient(135deg, #334155, #1e293b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--light-text);
+      text-align: center;
+      padding: 1.2rem;
+    }
+    .project-info { padding: 1.8rem; }
+    .project-tags {
+      margin: 1.2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    .tag {
+      background: #334155;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+    .project-links a { margin-right: 1.2rem; font-weight: 600; font-size: 1rem; }
+
+    .experience-grid, .education-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .item {
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 14px;
+      margin-bottom: 2rem;
+      transition: all 0.3s;
+    }
+    .item:hover { background: #334155; }
+    .item h3 { color: var(--primary); margin-bottom: 0.7rem; font-size: 1.5rem; }
+    .item .period { color: var(--light-text); font-style: italic; margin-bottom: 1rem; display: block; font-size: 1rem; }
+
+    .contact-form { max-width: 800px; margin: 0 auto; }
+    input, textarea {
+      width: 100%;
+      padding: 1.2rem;
+      margin: 0.8rem 0;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.05rem;
+    }
+    textarea { min-height: 150px; }
+
+    footer {
+      text-align: center;
+      padding: 4rem 0 2rem;
+      color: var(--light-text);
+      font-size: 0.95rem;
+      border-top: 1px solid #334155;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .hero h2 { font-size: 1.7rem; }
+      .hero p { font-size: 1.15rem; }
+      section { padding: 5rem 0; }
+      h2 { font-size: 2.4rem; margin-bottom: 2.5rem; }
+      .projects-grid { gap: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 1.5rem; }
+      .btn { padding: 0.8rem 1.6rem; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="home">
+    <div class="container hero">
+      <h1>Davi Nascimento</h1>
+      <h2>Software Developer</h2>
+      <p>Building functional interfaces, optimizing digital processes, and delivering user-centered solutions with a focus on usability and performance.</p>
+      <div class="contact-icons">
+        <a href="https://github.com/daviTavares2" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/davi-nascimento-620961350/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="tel:+5581998953122"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Developer with hands-on experience in building websites, digital interfaces, and process optimization. Focused on delivering functional, well-structured solutions using web technologies, UI/UX principles, and performance analysis.</p>
+      <p>I combine technical skills with a business-oriented mindset, having worked in online sales, task automation, and website creation for local clients. Constantly improving my skills while seeking my next opportunity to contribute to real-world projects.</p>
+      <p>📍 Pindamonhangaba – São Paulo, Brazil</p>
+    </div>
+  </section>
+
+  <section id="skills" style="background:#0f172a;">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
+        <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+        <div class="skill-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
+        <div class="skill-item"><i class="fas fa-code"></i><p>Bootstrap</p></div>
+        <div class="skill-item"><i class="fas fa-code"></i><p>jQuery</p></div>
+        <div class="skill-item"><i class="fas fa-terminal"></i><p>C++</p></div>
+        <div class="skill-item"><i class="fab fa-wordpress"></i><p>WordPress</p></div>
+        <div class="skill-item"><i class="fab fa-figma"></i><p>Figma</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-img-placeholder">Responsive Landing Page for Burger Restaurant<br>(Menu, Cart, WhatsApp Ordering)</div>
+          <div class="project-info">
+            <h3>Responsive Landing Page – Burger Restaurant</h3>
+            <p>Fully responsive landing page featuring dynamic menu, real-time cart, operating hours validation, and WhatsApp order submission. Strong emphasis on conversion, responsiveness, and user experience.</p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://davitavares2.github.io/landing-page-responsiva1/" target="_blank">Live Demo</a> •
+              <a href="https://github.com/daviTavares2/landing-page-responsiva1" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img-placeholder">Custom Institutional Website</div>
+          <div class="project-info">
+            <h3>Institutional Website with WordPress</h3>
+            <p>Creation and customization of institutional pages, with optimization of navigation, loading speed, and visual structure for improved user experience and basic SEO.</p>
+            <div class="project-tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">Performance</span>
+            </div>
+            <div class="project-links">
+              <a href="#contact">Details available upon request</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img-placeholder">UI/UX Prototypes & Wireframes</div>
+          <div class="project-info">
+            <h3>UI/UX Prototypes in Figma</h3>
+            <p>Development of functional wireframes and high-fidelity interfaces, applying usability principles, visual hierarchy, and clarity guidelines.</p>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">UI/UX Design</span>
+              <span class="tag">Prototyping</span>
+            </div>
+            <div class="project-links">
+              <a href="#contact">Cases available upon request</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>Professional Experience</h2>
+      <div class="experience-grid">
+        <div class="item">
+          <h3>Entrepreneur – Website Development</h3>
+          <span class="period">2025 – Present</span>
+          <p>Design and sale of websites and landing pages for local businesses. Development using HTML, CSS, JavaScript, and WordPress. Prototyping in Figma, performance & UX optimization, and digital strategies focused on conversion and online presence.</p>
+        </div>
+        <div class="item">
+          <h3>Amazon – Online Seller & Operations</h3>
+          <span class="period">Jul 2025 – Dec 2025</span>
+          <p>Sold over 100 products, managed cash flow, automated operational processes, and analyzed performance metrics to drive continuous improvement.</p>
+        </div>
+        <div class="item">
+          <h3>Independent Digital Operations & Automation</h3>
+          <span class="period">2025 – Present</span>
+          <p>Managed online operations, financial data analysis, and automation of repetitive tasks to increase overall efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" style="background:#0f172a;">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-grid">
+        <div class="item">
+          <h3>Bachelor’s Degree in Computer Engineering – UNITAU</h3>
+          <span class="period">2025 – Ongoing</span>
+          <p>Focus on C++, programming logic, and core software/system development fundamentals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <div class="contact-form">
+        <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="6" placeholder="Your message (e.g., Hi Davi, I saw your portfolio...)" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div style="text-align:center; margin-top:2.5rem; font-size:1.2rem;">
+          <p><i class="fas fa-phone"></i> +55 (81) 99895-3122</p>
+          <p style="margin:1.2rem 0;"><i class="fas fa-envelope"></i> tavaresdavi986@gmail.com</p>
+          <p>
+            <a href="https://github.com/daviTavares2" target="_blank"><i class="fab fa-github"></i> GitHub</a> •
+            <a href="https://www.linkedin.com/in/davi-nascimento-620961350/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Davi Nascimento. Built with clean code and great UX in mind.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
