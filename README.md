@@ -67,9 +67,9 @@ Easy to extend (add new projects by copying card structure)
 Let's Connect!
 I'm actively looking for opportunities as a Software Developer / Front-end (junior/entry-level).
 Feel free to reach out, review the code, or suggest improvements!
-📩 tavaresdavi986@gmail.com
-🔗 LinkedIn: https://www.linkedin.com/in/davi-nascimento-620961350/
-🐙 GitHub: https://github.com/daviTavares2
-📍 Pindamonhangaba, São Paulo, Brazil
-Made with ❤️ and a lot of coffee
-© 2025–2026 Davi Nascimento
+<p>📩 tavaresdavi986@gmail.com</p>
+<p>🔗 LinkedIn: https://www.linkedin.com/in/davi-nascimento-620961350/</p>
+<p>🐙 GitHub: https://github.com/daviTavares2</p>
+<p>📍 Pindamonhangaba, São Paulo, Brazil</p>
+<p>Made with ❤️ and a lot of coffee</p>
+<p>© 2025–2026 Davi Nascimento</p>
