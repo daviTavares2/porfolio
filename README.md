@@ -4,6 +4,16 @@
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/daviTavares2/portfolio)  
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/daviTavares2/portfolio)  
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/daviTavares2/portfolio)
+### Technical Skills
+
+- **Bootstrap** – Responsive design & components  
+  🔗 https://getbootstrap.com
+
+- **jQuery** – DOM manipulation & AJAX  
+  🔗 https://jquery.com
+
+- **C++** – Programming logic, OOP, performance  
+  🔗 https://en.cppreference.com/w/
 
 Personal portfolio website showcasing my skills, projects, professional experience, education, and passion for software development.
 
