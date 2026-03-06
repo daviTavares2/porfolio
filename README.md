@@ -1,6 +1,6 @@
 # Davi Nascimento - Software Developer Portfolio
 
-[![Vercel Deployment](https://therealsujitk-vercel-badge.vercel.app/api/davitavares2/portfolio?branch=main)](https://davitavares2.vercel.app)  
+
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/daviTavares2/portfolio)  
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/daviTavares2/portfolio)  
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/daviTavares2/portfolio)
@@ -8,7 +8,7 @@
 Personal portfolio website showcasing my skills, projects, professional experience, education, and passion for software development.
 
 ### Live Demo
-🌐 **https://davitavares2.vercel.app** (or your custom Vercel domain)
+🌐 *https://porfolio-seven-blond.vercel.app**
 
 ### About This Project
 This is my personal portfolio built from scratch to present myself to recruiters, companies, and the dev community.  
